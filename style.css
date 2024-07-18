@@ -1,0 +1,519 @@
+
+
+/* Global Rules */
+
+* {
+    padding:0;
+    
+    margin:0;
+    box-sizin:border-box;
+    font-family: serif;
+}
+
+:root {
+    --black:#000;
+    --red:red;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* END GLOBAL RULES */
+/* START NAV BAR */
+
+nav {
+    background :var(--black);
+    color: white;
+    padding: 15px 0;
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#logo_2 img{
+    width:100%;
+    border-radius:50%;
+}
+ul li {
+
+    margin: 10px 0 10px 10px;
+}
+
+ul {
+    list-style:none;
+    display: flex;
+    gap: 10px;
+    justify-content:center;
+}
+
+ul li a {
+    color: white;
+    padding:10px;
+    font-size: 18px;
+    font-family: serif;
+    text-decoration: none;  
+}
+ul li i {
+    font-size: 20px;
+}
+ul li a:active, .active{
+    background-color:#ffffff55;
+    border-radius: 12px;
+}
+
+/* END NAV BAR  */
+
+/* START SECTION ONE */
+
+.section_one{
+    background: #333;
+    color: white;
+    padding: 20px 10px;
+    text-align:center;
+}
+
+#logo_2{
+    width:75%;
+    height: 300px;
+   margin-left: 10%;
+   animation: translation 1s ease 1;
+   filter: drop-shadow(2px 2px 13px white);
+    
+    
+    
+}
+
+.section_one > div img {
+    width:100%;
+    height: 100%;
+    border-radius: 50%;  
+    
+}
+.into h1 {
+    animation: translation_2 1s ease 1;
+}
+.into {
+    padding: 30px;
+    font-family: serif;
+}
+
+.into p {
+    line-height:3.5;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: serif;
+    animation: translation_2 1s ease 1;
+    
+}
+
+
+span:first-child {
+    color: red;
+}
+
+#download {
+    width: 220px;
+    background: blue;
+    color:white;
+    font-size: 16.5px;
+    text-align:center;
+    padding: 15px 0;
+    border:none;
+    border-radius: 30px;
+    animation: opacity 1s ease 1;
+    transition: all 0.5s ease;
+    font-weight: 400;
+    
+}
+#download:hover{
+    transform: scale(1.2);
+}
+
+@keyframes trans{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* END SECTION ONE  */
+
+
+
+
+/* SERVICE */
+.service {
+    background-color: #111;
+    margin-top:-20px;
+}
+#ser {
+   animation: trans 2s ease infinite;
+   position: relative;
+
+   padding: 20px;
+    color: white;
+}
+
+#ser::before{
+    content:"";
+    background-color: gold;
+    height: 5px;
+    width: 150px;
+    letter-spacing: 7px;
+    top: 60px;
+    position : absolute;
+    transform: skew(30deg);
+}
+
+.category {
+    display: flex;
+   flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.boxing {
+    width: 85%;
+    
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    filter:drop-shadow(2px 2px 6px linear-gradient(135deg, #222, #020202));           
+    margin: auto;
+    animation: translation 1s ease 1;
+    border-radius: 26px;
+   
+}
+
+.boxing h1 {
+    font-family: cursive;
+    animation: translation 1s ease 1;
+    margin: 20px 0;
+}
+.boxing i {
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.boxing p {
+    line-height:1.8;
+    margin-bottom: 30px;
+    
+}
+.boxing button {
+    width: 50%;
+    background-color: red;
+    padding: 10px 0;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius:30px;
+}
+
+.boxing button:hover {
+    background: transparent;
+    border: 2px solid red;
+}
+
+@keyframes translation {
+    from{
+        transform: translate(-5rem);
+        opacity:0;
+    }
+    to {
+        transform: translate(0rem);
+        opacity:1;
+    }
+}
+@keyframes translation_2 {
+    from{
+        transform: translate(5rem);
+        opacity:0;
+    }
+    to {
+        transform: translate(0rem);
+        opacity:1;
+    }
+}
+
+
+
+@media screen and (min-width:500px){
+   /*.section_one {
+        display: none;
+    }*/
+    
+    ul {
+        margin: auto;
+    }
+    #download{
+         display: none;
+    }
+    #logo_2{
+        width: 300px;
+        margin: auto;
+    }
+    .boxing{
+        margin:10px 20px;
+    }
+    .category {
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+        gap: 10px;
+    }
+}
+/* END SERVICE */
+
+/* START ABOUT */
+
+.about {
+    
+    color:white;
+    padding: 20px 15px;
+}
+
+.about h1 {
+    font-size: 40px;
+    position: relative;
+}
+
+.about h1::before{
+    content:"";
+    background-color: gold;
+    height: 5px;
+    width: 150px;
+    top: 50px;
+    position : absolute;
+    transform: skew(30deg);
+}
+
+.info {
+    padding: 10px;
+}
+.flex{
+    background: #222;
+    display: flex;
+    gap:10px;
+    align-items:center;
+    margin: 20px 0;
+    padding: 10px;
+    border-top-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+.flex h4 {
+    font-size: 20px;
+}
+.flex i {
+    background: blue;
+    padding:10px;
+    border-radius:50%;
+    margin-right: 15px;
+}
+.flex a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* END ABOUT */
+/* START SKILLS  */
+
+
+.skill_h1 {
+    margin: 0 0 40px 10px;
+}
+
+.skills_content h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.skills_content h4 i {
+    font-size: 22px;
+}
+.hawiya {
+            position: relative;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #333;
+            margin-bottom: 14px;
+        }
+       
+  .haw1::after {
+      content:"100%";
+      position:absolute;
+      right: 0;
+      top: -35px;
+  }
+  
+  .Css_haw::after {
+     content:"90%";
+      position:absolute;
+      right: 0;
+      top: -35px;     
+  }
+  
+  .Js_haw::after{
+      content:"70%";
+      position:absolute;
+      right: 0;
+      top: -35px;
+      
+  }
+.Bt_haw::after{
+     content:"80%";
+      position:absolute;
+      right: 0;
+      top: -35px;
+    
+}
+
+
+.line{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*
+            width: 100%;*/
+            height: 8px;
+            border-radius: 4px;
+            background-color: green;
+            border: 1px solid green;
+        }
+@media screen and (min-width:500px){
+   .skills_content{
+       width: 80%;
+       margin: 90px auto;
+       transform:scale(1.2);
+   }
+   .contact h1 {
+       font-size: 36px;
+   }
+}
+        
+  
+  
+/* END ABOUT */
+/* START CONTACT */
+
+.contact h1 {
+    line-height: 1.7;
+    position: relative;
+    margin: 0 0 20px 20px;
+}
+
+.contact h1::before {
+    content:"";
+    background-color: gold;
+    height: 5px;
+    width: 150px;
+    top: 50px;
+    left: 10px;
+    position : absolute;
+    transform: skew(30deg);
+    
+}
+
+form {
+    text-align: center;
+    padding: 20px 15px;
+    background: #222;
+}
+
+form button {
+    display : block;
+    margin:20px auto;
+    font-weight: bold;
+    padding:15px 0;
+    background:#2196f3;
+    color:white;
+    width:75%;
+    transition: all 0.5s ease;
+    font-size:1rem;
+    border:none;
+    
+}
+form button:hover{
+    margin-right:20px;
+}
+
+input[type="text"],input[type="email"],input[type="number"]{
+    height: 30px;
+    background:#ececec;
+    margin-bottom: 10px; 
+    padding:0 10px;
+    border-bottom: 2px solid black;
+    width: 70%;
+    border:none;
+}
+
+input[type="email"]:invalid{
+    border:2px solid red;
+}
+input[type="email"]:valid{
+    border:2px solid green;
+}
+
+textarea {
+    height: 200px;
+    background: #ececec;
+    width: 70%;
+    padding:0 10px;
+    border:none;
+}
+::placeholder{
+    color:#777;
+    padding: 15px;
+    
+}
+::placeholder:focus{
+    opacity:0.5;
+}
+/* END CONTACT */
+  
+footer{
+    
+    padding: 20px 10px;
+    text-align:center;
+}
+footer i{
+    color:white;
+    font-size:30px;
+    background: #ffffff55;
+    padding: 10px;
+    margin-right:10px;
+    
+    transition: all 0.5s ease;
+}
+footer i:hover{
+    transform: scale(1.2);
+}
+.icon{
+    margin:20px 0;
+}
+  
+footer p {
+    color:white;
+    font-size: 25x;
+    margin: 20px 0;
+} 
+
+footer a{
+    text-decoration:none;
+}
+  
+.fa-arrow-up{
+    font-size: 25px;
+    background:#2196f3;
+    padding: 10px;
+    position: fixed;
+    bottom:10px;
+    right:10px;
+}
